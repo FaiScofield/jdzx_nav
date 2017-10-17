@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<launch>
+  <param name="use_sim_time" value="false"/>
+  
+  <!-- slam_karto -->
+  <node pkg="slam_karto" type="slam_karto" name="slam_karto" output="screen">
+    <remap from="scan" to="/hokuyo/scan" />
+  </node>
+  
+  <!-- rviz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jdzx_nav)/config/guardian_navigation.rviz"/>
+  
+  <!-- hokuyo -->
+  <node name="hokuyo" pkg="hokuyo_node" type="hokuyo_node" respawn="false" output="screen">
+    <!-- Starts up faster, but timestamps will be inaccurate. --> 
+    <param name="calibrate_time" type="bool" value="false"/> 
+    <!-- Set the port to connect to here -->
+    <param name="port" type="string" value="/dev/ttyACM1"/> 
+    <param name="intensity" type="bool" value="false"/>
+    <param name="frame_id" value="/hokuyo_laser_link"/>
+  </node>
+  
+  
+  <node name="base_stp" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 /odom /base_footprint  100"/>
+  
+</launch>

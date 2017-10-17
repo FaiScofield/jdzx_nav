@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find jdzx_nav)/launch/fetch_nav_main.launch" >
+   
+  </include>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jdzx_nav)/launch/fetch/navigation.rviz"/>
+</launch>

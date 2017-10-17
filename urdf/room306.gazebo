@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<robot>
+  <!-- Links -->
+  <gazebo reference="link1">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+<gazebo reference="room">
+    <material>Gazebo/Gray</material>
+  </gazebo>
+  <gazebo reference="table1">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="table2">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="table3">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="table4">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="table5">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="table6">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="table7">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="table8">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="table9">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="table10">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="table11">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="table12">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="table13">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="table14">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+
+  
+</robot>
+
+

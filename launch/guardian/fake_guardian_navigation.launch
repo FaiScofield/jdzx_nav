@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find jdzx_nav)/launch/guardian/fake_guardian.launch" />
+  
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jdzx_nav)/config/guardian_navigation.rviz"/>
+
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find jdzx_nav)/maps/jdzx3_psed.yaml"/>
+
+  <!--- Run AMCL -->
+  <include file="$(find guardian_navigation)/navigation_amcl/amcl_guardian.launch" />
+  <remap from="cmd_vel" to="guardian_node/command" />
+
+  <!-- Run move_base -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <!--remap from="odom" to="robot_pose_ekf/odom_combined" /-->
+    <!--remap from="odom" to="odom" /-->
+    <rosparam file="$(find guardian_navigation)/navigation_config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find guardian_navigation)/navigation_config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find guardian_navigation)/navigation_config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find guardian_navigation)/navigation_config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find guardian_navigation)/navigation_config/base_local_planner_params.yaml" command="load" />
+  </node>
+  
+  <!-- Run fake localization compatible with AMCL output -->
+  <node pkg="fake_localization" type="fake_localization" name="fake_localization" clear_params="true" output="screen">
+     <remap from="base_pose_ground_truth" to="odom" />
+     <param name="global_frame_id" value="map" />
+     <param name="base_frame_id" value="base_footprint" />
+  </node>
+
+  
+  <!--node name="base_stp" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 /map /odom  20"/-->
+  <!--node name="base_stp2" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 /odom /base_footprint  20"/-->
+    <!-- ros_control guardian launch file 
+  <include file="$(find jdzx_nav)/launch/guardian/guardian_control.launch" />-->
+</launch>

@@ -1,0 +1,17 @@
+<launch>
+
+  <arg name="scan_topic"     default="base_scan" />
+  <arg name="map_topic"      default="map" />
+  <arg name="use_map_topic"  default="false" />
+
+  <node pkg="amcl" type="amcl" name="amcl">
+    <remap from="scan" to="$(arg scan_topic)" />
+    <remap from="map" to="$(arg map_topic)" />
+    <param name="use_map_topic"  value="$(arg use_map_topic)" />
+    <param name="initial_pose_x" value="0.0" />
+    <param name="initial_pose_y" value="0.0" />
+    <param name="initial_pose_a" value="0.0" />
+    <rosparam file="$(find jdzx_nav)/config/amcl.yaml" command="load" />
+  </node>
+
+</launch>

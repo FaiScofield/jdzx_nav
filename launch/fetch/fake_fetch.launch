@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<launch>
+  <param name="/use_sim_time" value="false" />
+
+  <!-- Setup controllers -->
+  <rosparam file="$(find fetch_gazebo)/config/default_controllers.yaml" command="load" />
+
+  <!-- URDF and TF support -->
+  <param name="robot_description" command="$(find xacro)/xacro.py $(find fetch_gazebo)/robots/fetch.gazebo.xacro" />
+
+  <node name="arbotix" pkg="arbotix_python" type="arbotix_driver" output="screen" clear_params="true">
+      <rosparam file="$(find jdzx_nav)/config/fake_fetch_arbotix.yaml" command="load" />
+      <param name="sim" value="true"/>
+  </node>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
+    <param name="publish_frequency" type="double" value="20.0"/>
+  </node>
+
+  <!-- Put a robot in gazebo, make it look pretty -->
+  <!--node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-urdf 0 -y 0 -z 0 -model fetch -param robot_description"/-->
+  <node name="prepare_robot" pkg="jdzx_nav" type="prepare_fetch.py" output="screen" />
+
+  <!--node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
+      <param name="publish_frequency" type="double" value="20.0" />
+  </node-->
+
+  <!-- Run a static transform between /base_link and /base_footprint needed for SLAM -->
+  <node pkg="tf" type="static_transform_publisher" name="base_footprint_broadcaster" args="0 0 0 0 0 0 /base_link /base_footprint 100" />
+
+  
+</launch>

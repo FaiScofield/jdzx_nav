@@ -1,0 +1,295 @@
+<?xml version="1.0" ?>
+<sdf version='1.4'>
+  <model name='room306'>
+    <link name='room'>
+      <pose>0 10 0 0 -0 0</pose>
+      <inertial>
+        <pose>-1.56018 -10.0239 0.408628 0 -0 0</pose>
+        <mass>47990.7</mass>
+        <inertia>
+          <ixx>704440</ixx>
+          <ixy>-5413.76</ixy>
+          <ixz>-2439.59</ixz>
+          <iyy>786576</iyy>
+          <iyz>3273.3</iyz>
+          <izz>1.36061e+06</izz>
+        </inertia>
+      </inertial>
+      <collision name='room_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/room.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='room_collision_table1'>
+        <pose>-1.30874 -6.296 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='room_collision_table10'>
+        <pose>-6.34474 -13.596 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table10.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='room_collision_table11'>
+        <pose>-3.21574 -14.646 -0.772094 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table11.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='room_collision_table12'>
+        <pose>-1.41574 -14.646 -0.772094 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table12.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='room_collision_table13'>
+        <pose>0.38426 -14.646 -0.772094 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table13.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='room_collision_table14'>
+        <pose>-2.45874 -10.361 -0.767094 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table14.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='room_collision_table2'>
+        <pose>3.24626 -8.806 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table2.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='room_collision_table3'>
+        <pose>3.24626 -7.606 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table3.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='room_collision_table4'>
+        <pose>-1.30874 -6.296 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table4.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='room_collision_table5'>
+        <pose>-6.34474 -7.596 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table5.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='room_collision_table6'>
+        <pose>-6.34474 -8.796 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table6.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='room_collision_table7'>
+        <pose>-6.34474 -9.996 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table7.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='room_collision_table8'>
+        <pose>-6.34474 -11.196 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table8.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='room_collision_table9'>
+        <pose>-6.34474 -12.396 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table9.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='room_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/room.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='room_visual_table1'>
+        <pose>-1.30874 -6.296 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table1.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='room_visual_table10'>
+        <pose>-6.34474 -13.596 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table10.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='room_visual_table11'>
+        <pose>-3.21574 -14.646 -0.772094 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table11.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='room_visual_table12'>
+        <pose>-1.41574 -14.646 -0.772094 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table12.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='room_visual_table13'>
+        <pose>0.38426 -14.646 -0.772094 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table13.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='room_visual_table14'>
+        <pose>-2.45874 -10.361 -0.767094 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table14.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='room_visual_table2'>
+        <pose>3.24626 -8.806 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table2.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='room_visual_table3'>
+        <pose>3.24626 -7.606 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table3.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='room_visual_table4'>
+        <pose>-1.30874 -6.296 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table4.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='room_visual_table5'>
+        <pose>-6.34474 -7.596 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table5.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='room_visual_table6'>
+        <pose>-6.34474 -8.796 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table6.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='room_visual_table7'>
+        <pose>-6.34474 -9.996 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table7.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='room_visual_table8'>
+        <pose>-6.34474 -11.196 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table8.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='room_visual_table9'>
+        <pose>-6.34474 -12.396 -0.804594 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://room306/meshes/table9.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+  </model>
+</sdf>
+

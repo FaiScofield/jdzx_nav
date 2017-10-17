@@ -1,0 +1,786 @@
+<?xml version="1.0"?>
+<robot
+  name="room306">
+  <link
+    name="room">
+    <inertial>
+      <origin
+        xyz="-1.52183054107555 -9.93870157982482 0.483945450655085"
+        rpy="0 0 0" />
+      <mass
+        value="45346.8" />
+      <inertia
+        ixx="674485.627200213"
+        ixy="-4305.39502402329"
+        ixz="-42.1013677540997"
+        iyy="752802.858571609"
+        iyz="8488.71186506657"
+        izz="1306265.37280112" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/room.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/room.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="table1">
+    <inertial>
+      <origin
+        xyz="4.25490454326604 -0.0920905234071352 4.31"
+        rpy="0 0 0" />
+      <mass
+        value="143.311" />
+      <inertia
+        ixx="18.1626871813065"
+        ixy="-0.000347601639788651"
+        ixz="-1.22753369968809E-15"
+        iyy="20.8101693108186"
+        iyz="1.14081649942727E-14"
+        izz="5.02156617545839" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table1.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table1.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table1_to_room"
+    type="fixed">
+    <origin
+      xyz="-1.30873985330926 -6.296 -0.804593542173516"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="room" />
+    <child
+      link="table1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="table2">
+    <inertial>
+      <origin
+        xyz="-0.300095456733957 -0.0920905234071351 0.6"
+        rpy="0 0 0" />
+      <mass
+        value="143.311" />
+      <inertia
+        ixx="18.1626871813066"
+        ixy="-0.000347601639790632"
+        ixz="6.37033828465583E-15"
+        iyy="20.8101693108186"
+        iyz="1.65832245938718E-14"
+        izz="5.0215661754584" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table2.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table2_to_table1"
+    type="fixed">
+    <origin
+      xyz="4.555 0 2.51"
+      rpy="0 0 0" />
+    <parent
+      link="table1" />
+    <child
+      link="table2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="table3">
+    <inertial>
+      <origin
+        xyz="-0.300095456733956 -0.0920905234071353 0.600000000000003"
+        rpy="0 0 0" />
+      <mass
+        value="143.311" />
+      <inertia
+        ixx="18.1626871813064"
+        ixy="-0.00034760163979296"
+        ixz="-3.43865561025503E-15"
+        iyy="20.8101693108185"
+        iyz="1.60841392288225E-16"
+        izz="5.02156617545838" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table3.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table3_to_table2"
+    type="fixed">
+    <origin
+      xyz="0 0 -1.2"
+      rpy="0 0 0" />
+    <parent
+      link="table2" />
+    <child
+      link="table3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="table4">
+    <inertial>
+      <origin
+        xyz="0.6 -0.0920905234071353 0.300095456733955"
+        rpy="0 0 0" />
+      <mass
+        value="143.311" />
+      <inertia
+        ixx="5.02156617545838"
+        ixy="-5.8870280612161E-15"
+        ixz="-1.8398910867079E-15"
+        iyy="20.8101693108185"
+        iyz="0.000347601639794192"
+        izz="18.1626871813065" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table4.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table4.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table4_to_room"
+    type="fixed">
+    <origin
+      xyz="-1.30873985330926 -6.296 -0.804593542173516"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="room" />
+    <child
+      link="table4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="table5">
+    <inertial>
+      <origin
+        xyz="0.300095456733957 -0.0920905234071352 -0.600000000000002"
+        rpy="0 0 0" />
+      <mass
+        value="143.311" />
+      <inertia
+        ixx="18.1626871813065"
+        ixy="0.000347601639792208"
+        ixz="2.17946320713036E-15"
+        iyy="20.8101693108185"
+        iyz="4.26053506710766E-15"
+        izz="5.02156617545838" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table5.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table5.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table5_to_room"
+    type="fixed">
+    <origin
+      xyz="-6.34473985330926 -7.596 -0.804593542173516"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="room" />
+    <child
+      link="table5" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="table6">
+    <inertial>
+      <origin
+        xyz="0.300095456733956 -0.092090523407135 -0.600000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="143.311" />
+      <inertia
+        ixx="18.1626871813065"
+        ixy="0.000347601639789028"
+        ixz="1.40209024945825E-15"
+        iyy="20.8101693108185"
+        iyz="-5.2378349053861E-15"
+        izz="5.02156617545837" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table6.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table6.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table6_to_table5"
+    type="fixed">
+    <origin
+      xyz="0 0 1.2"
+      rpy="0 0 0" />
+    <parent
+      link="table5" />
+    <child
+      link="table6" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="table7">
+    <inertial>
+      <origin
+        xyz="0.300095456733956 -0.0920905234071354 -0.6"
+        rpy="0 0 0" />
+      <mass
+        value="143.311" />
+      <inertia
+        ixx="18.1626871813064"
+        ixy="0.000347601639789656"
+        ixz="1.10241676898326E-15"
+        iyy="20.8101693108185"
+        iyz="3.1738446506363E-14"
+        izz="5.02156617545838" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table7.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table7.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table7_to_table6"
+    type="fixed">
+    <origin
+      xyz="0 0 1.2"
+      rpy="0 0 0" />
+    <parent
+      link="table6" />
+    <child
+      link="table7" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="table8">
+    <inertial>
+      <origin
+        xyz="0.300095456733957 -0.0920905234071349 -0.6"
+        rpy="0 0 0" />
+      <mass
+        value="143.311" />
+      <inertia
+        ixx="18.1626871813064"
+        ixy="0.000347601639790079"
+        ixz="-8.97502558383501E-16"
+        iyy="20.8101693108185"
+        iyz="3.84558108013772E-14"
+        izz="5.02156617545837" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table8.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table8.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table8_to_table7"
+    type="fixed">
+    <origin
+      xyz="0 0 1.2"
+      rpy="0 0 0" />
+    <parent
+      link="table7" />
+    <child
+      link="table8" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="table9">
+    <inertial>
+      <origin
+        xyz="0.300095456733957 -0.0920905234071348 -0.6"
+        rpy="0 0 0" />
+      <mass
+        value="143.311" />
+      <inertia
+        ixx="18.1626871813064"
+        ixy="0.000347601639790664"
+        ixz="-2.5281426258017E-15"
+        iyy="20.8101693108185"
+        iyz="2.7611430936797E-14"
+        izz="5.02156617545837" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table9.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table9.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table9_to_table8"
+    type="fixed">
+    <origin
+      xyz="0 0 1.2"
+      rpy="0 0 0" />
+    <parent
+      link="table8" />
+    <child
+      link="table9" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="table10">
+    <inertial>
+      <origin
+        xyz="0.300095456733957 -0.0920905234071354 -0.599999999999996"
+        rpy="0 0 0" />
+      <mass
+        value="143.311" />
+      <inertia
+        ixx="18.1626871813064"
+        ixy="0.00034760163978976"
+        ixz="-2.44834534590677E-15"
+        iyy="20.8101693108184"
+        iyz="5.28659689809363E-15"
+        izz="5.02156617545836" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table10.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table10.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table10_to_table11"
+    type="fixed">
+    <origin
+      xyz="0 0 1.2"
+      rpy="0 0 0" />
+    <parent
+      link="table9" />
+    <child
+      link="table10" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="table11">
+    <inertial>
+      <origin
+        xyz="-0.00123706746036101 -0.100154106926046 -0.500095275773161"
+        rpy="0 0 0" />
+      <mass
+        value="366.514999999999" />
+      <inertia
+        ixx="31.1111171207088"
+        ixy="-0.178371531293596"
+        ixz="0.000681564982000493"
+        iyy="124.280891263417"
+        iyz="-0.000954918586147398"
+        izz="98.0383580548525" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table11.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table11.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table11_to_room"
+    type="fixed">
+    <origin
+      xyz="-3.21573985330926 -14.646 -0.772093542173515"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="room" />
+    <child
+      link="table11" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="table12">
+    <inertial>
+      <origin
+        xyz="-0.00123706746036145 -0.100154106926046 -0.500095275773162"
+        rpy="0 0 0" />
+      <mass
+        value="366.515" />
+      <inertia
+        ixx="31.1111171207088"
+        ixy="-0.178371531293636"
+        ixz="0.000681564982000467"
+        iyy="124.280891263417"
+        iyz="-0.000954918586143434"
+        izz="98.0383580548525" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table12.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table12.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table12_to_table11"
+    type="fixed">
+    <origin
+      xyz="1.8 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="table11" />
+    <child
+      link="table12" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="table13">
+    <inertial>
+      <origin
+        xyz="-0.00123706746036151 -0.100154106926047 -0.500095275773162"
+        rpy="0 0 0" />
+      <mass
+        value="366.515" />
+      <inertia
+        ixx="31.1111171207088"
+        ixy="-0.178371531293591"
+        ixz="0.000681564982024223"
+        iyy="124.280891263417"
+        iyz="-0.000954918586144825"
+        izz="98.0383580548525" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table13.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table13.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table13_to_table12"
+    type="fixed">
+    <origin
+      xyz="1.8 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="table12" />
+    <child
+      link="table13" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="table14">
+    <inertial>
+      <origin
+        xyz="8.43769498715119E-15 -0.0501702623932924 0.677500000000002"
+        rpy="0 0 0" />
+      <mass
+        value="111.25475" />
+      <inertia
+        ixx="23.9421864987631"
+        ixy="2.14857149294017E-13"
+        ixz="-1.5237064061868E-13"
+        iyy="85.2466084536461"
+        iyz="2.51405939881099E-14"
+        izz="64.8171238909506" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table14.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://room306/meshes/table14.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="table14_to_room"
+    type="fixed">
+    <origin
+      xyz="-2.45873985330926 -10.361 -0.767093542173516"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="room" />
+    <child
+      link="table14" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

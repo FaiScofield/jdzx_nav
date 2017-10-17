@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find jdzx_nav)/launch/guardian/guardian_slam_gmapping.launch"/>
+  
+  <param name="use_sim_time" value="false"/>
+  
+  <node name="hokuyo" pkg="hokuyo_node" type="hokuyo_node" respawn="false" output="screen">
+    <!-- Starts up faster, but timestamps will be inaccurate. --> 
+    <param name="calibrate_time" type="bool" value="false"/> 
+    <!-- Set the port to connect to here -->
+    <param name="port" type="string" value="/dev/ttyACM0"/> 
+    <param name="intensity" type="bool" value="false"/>
+    <param name="frame_id" value="/hokuyo_laser_link"/>
+  </node>  
+  
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jdzx_nav)/config/guardian_navigation.rviz"/>
+  
+  <node name="base_stp1" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 /odom /base_footprint  100"/>
+
+
+</launch>
